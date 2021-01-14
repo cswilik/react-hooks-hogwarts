@@ -1,8 +1,22 @@
+import HogImages from "./HogImages"
 
-function HogItem({name}) {
+
+// debugger
+
+function HogItem({ name, specialty, greased, weight, metal }) {
+
+    function handleClick() {
+        const otherInfo = <p>{specialty}</p>
+        return(
+        otherInfo
+        
+        )}
+
     return (
-        <div className="ui eight wide column">
+        <div id={name} className="ui eight wide column" onClick={handleClick}>
             <h3>{name}</h3>
+            {otherInfo}
+            <HogImages name= {name}/>
         </div>
     )
 }
